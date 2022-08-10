@@ -1,0 +1,22 @@
+.footer {
+  background-image: url(../images/footer.png);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  &__container {
+    width: 50%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 15px;
+    padding-bottom: 210px;
+  }
+
+  &__main {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+}

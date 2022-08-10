@@ -1,0 +1,64 @@
+@use "variebles" as *;
+
+.header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  padding-top: 53px;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+  }
+
+  &__nav {
+  }
+
+  &__social {
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 93px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $white;
+    text-decoration: none;
+    padding: 5px;
+    text-transform: uppercase;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 9px;
+      width: 9px;
+      border-radius: 50%;
+      border: 1px solid $white;
+      left: -15px;
+      top: 8px;
+      transition: all 0.3 ease-in-out;
+      transition-duration: 1s;
+    }
+
+    &:hover {
+      &::before {
+        background-color: $white;
+      }
+    }
+  }
+}

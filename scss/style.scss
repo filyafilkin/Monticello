@@ -1,0 +1,242 @@
+@use "header";
+@use "hero";
+@use "about";
+@use "news";
+@use "gallery";
+@use "footer";
+@use "contacts";
+@use "variebles" as *;
+
+// Main
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  fill: $black;
+  &__link {
+  }
+
+  &__icon {
+  }
+}
+
+// Fonts
+
+.slogan {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 98px;
+  letter-spacing: 0.1em;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.subslogan {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.3em;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 54px;
+  color: $dark-blue;
+  text-transform: uppercase;
+  position: relative;
+  &::after {
+    content: "";
+    border-top: 2px solid $dark-blue;
+    width: 100px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.title--white {
+  color: $white;
+  &::after {
+    content: "";
+    border-top: 2px solid $white;
+  }
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 54px;
+  color: $dark-blue;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  color: $dark-blue;
+  text-transform: uppercase;
+}
+
+.desc {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: $dark-blue;
+  text-align: start;
+  max-width: 470px;
+  text-decoration: none;
+}
+
+.location {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: $black;
+  align-items: center;
+}
+
+.headline {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: $dark-blue;
+  text-transform: uppercase;
+}
+
+.author-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: $dark-blue;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.date-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $blue;
+}
+
+.copyright {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $white;
+}
+
+// Buttons
+
+.btn-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.btn {
+  border: 1px solid $dark-blue;
+  padding: 15px 40px;
+  text-decoration: none;
+  transition: all 0.6s ease-in-out;
+
+  &:hover {
+    background-color: $dark-blue;
+    border: 1px solid transparent;
+  }
+
+  &:hover > .btn-text {
+    color: $white;
+  }
+}
+
+.btn--submit {
+  border: 1px solid $dark-blue;
+  padding: 10px 35px;
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $black;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: $black;
+  transition: all 0.6s ease-in-out;
+  &:hover {
+    background-color: $dark-blue;
+    border: 1px solid transparent;
+    color: $white;
+  }
+}
+
+// Fonts Awesome
+
+.fa-solid {
+  padding-right: 10px;
+  color: $violet;
+}
+
+.social {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  &__link {
+    color: $white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid $white;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $white;
+      border-color: $white;
+      box-shadow: 0 0 10px 2px $blue;
+      color: $blue;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// Colors
+
+$white: #ffffff;
+$black: #000000;
+$dark-blue: #2c4058;
+$background: #e5e5e5;
+$violet: #7e5aff;
+$blue: #55b7ff;
+$placeholder: #4b5562;
+
+@keyframes pulse-map {
+  0% {
+    box-shadow: 0 0 0 0 rgba($white, 0.8), 0 0 0 25px rgba($white, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 0 25px rgba($white, 0.8), 0 0 0 25px rgba($white, 0);
+  }
+
+  65% {
+    box-shadow: 0 0 0 25px rgba($white, 0.8), 0 0 0 50px rgba($white, 0.3);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba($white, 0.8), 0 0 0 0 rgba($white, 0);
+  }
+}
+
+#map div[title="We are here!"] {
+  animation: pulse-map 1.4s linear infinite;
+  border-radius: 50%;
+}
